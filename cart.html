@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Ecommerce - Contact</title>
+    <title>Ecommerce - Cart-page</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -25,14 +25,124 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap"
     />
     <link rel="stylesheet" href="assets/css/fontawesome.min.css" />
+    <style>
+      /* CSS styles */
+      #cart {
+        overflow-x: auto;
+        margin: 40px;
+        padding: 10px;
+      }
 
-    <!-- Load map styles -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-      crossorigin=""
-    />
+      #cart table {
+        width: 100%;
+        border-collapse: collapse;
+        table-layout: fixed;
+        white-space: nowrap;
+      }
+
+      #cart table img {
+        width: 70px;
+      }
+
+      #cart table td:nth-child(1) {
+        width: 100px;
+        text-align: center;
+      }
+
+      #cart table td:nth-child(2) {
+        width: 150px;
+        text-align: center;
+      }
+
+      #cart table td:nth-child(3) {
+        width: 250px;
+        text-align: center;
+      }
+
+      #cart table td:nth-child(4),
+      #cart table td:nth-child(5),
+      #cart table td:nth-child(6) {
+        width: 150px;
+        text-align: center;
+      }
+
+      #cart table td:nth-child(5) input {
+        width: 70px;
+        padding: 10px 5px 10px 15px;
+      }
+
+      #cart table thead {
+        border: 1px solid #e2e9e1;
+        border-left: none;
+        border-right: none;
+      }
+
+      #cart table thead td {
+        font-weight: 700;
+        text-transform: uppercase;
+        font-size: 13px;
+        padding: 18px 0;
+      }
+
+      #cart table tbody tr td {
+        padding-top: 15px;
+      }
+
+      #cart table tbody td {
+        font-size: 13px;
+      }
+
+      #cart-add {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        margin: 50px;
+        padding: 10px;
+      }
+
+      #coupon {
+        width: 50%;
+        margin-bottom: 30px;
+      }
+
+      #coupon h3,
+      #subtotal h3 {
+        font-size: 26px;
+      }
+
+      #coupon input {
+        padding: 10px 20px;
+        outline: none;
+        width: 60%;
+        margin-right: 10px;
+        border: 1px solid #e2e9e1;
+      }
+
+      #coupon button,
+      #subtotal button {
+        padding: 12px 20px;
+      }
+
+      #subtotal {
+        width: 50%;
+        margin-bottom: 30px;
+        border: 1px solid #e2e9e1;
+        padding: 30px;
+      }
+
+      #subtotal table {
+        border-collapse: collapse;
+        width: 100%;
+        margin-bottom: 20px;
+      }
+
+      #subtotal table td {
+        width: 50%;
+        border: 1px solid #e2e9e1;
+        padding: 10px;
+        font-size: 13px;
+      }
+    </style>
   </head>
 
   <body>
@@ -67,7 +177,7 @@
               class="nav navbar-nav d-flex justify-content-between mx-lg-auto"
             >
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" href="index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
@@ -83,19 +193,7 @@
           <div class="navbar align-self-center d-flex">
             <div
               class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3"
-            >
-              <div class="input-group">
-                <input
-                  type="text"
-                  class="form-control"
-                  id="inputMobileSearch"
-                  placeholder="Search ..."
-                />
-                <div class="input-group-text">
-                  <i class="fa fa-fw fa-search"></i>
-                </div>
-              </div>
-            </div>
+            ></div>
             <a
               class="nav-icon d-none d-lg-inline"
               href="#"
@@ -104,7 +202,7 @@
             >
               <i class="fa fa-fw fa-search text-dark mr-2"></i>
             </a>
-            <a class="nav-icon position-relative text-decoration-none" href="cart.html">
+            <a class="nav-icon position-relative text-decoration-none" href="#">
               <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
               <span
                 class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"
@@ -126,159 +224,80 @@
       </div>
     </nav>
     <!-- Close Header -->
+    <section id="cart" class="add-remove">
+      <table width="100%">
+        <thead>
+          <tr>
+            <td>Remove</td>
+            <td>Image</td>
+            <td>Product</td>
+            <td>Price</td>
+            <td>Quantity</td>
+            <td>Subtotal</td>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td>
+              <a href="#"><i class="fa-regular fa-circle-xmark"></i></a>
+            </td>
+            <td><img src="./assets/img/products/f1.jpg" alt="" /></td>
+            <td>Cartoon Astronaut T-Shirts</td>
+            <td>Rs. 2200</td>
+            <td><input type="number" value="1" /></td>
+            <td>Rs. 2200</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#"><i class="fa-regular fa-circle-xmark"></i></a>
+            </td>
+            <td><img src="./assets/img/products/f2.jpg" alt="" /></td>
+            <td>Cartoon Astronaut T-Shirts</td>
+            <td>Rs. 2200</td>
+            <td><input type="number" value="1" /></td>
+            <td>Rs. 2200</td>
+          </tr>
+          <tr>
+            <td>
+              <a href="#"><i class="fa-regular fa-circle-xmark"></i></a>
+            </td>
+            <td><img src="./assets/img/products/f3.jpg" alt="" /></td>
+            <td>Cartoon Astronaut T-Shirts</td>
+            <td>Rs. 2200</td>
+            <td><input type="number" value="1" /></td>
+            <td>Rs. 2200</td>
+          </tr>
+        </tbody>
+      </table>
+    </section>
 
-    <!-- Modal -->
-    <div
-      class="modal fade bg-white"
-      id="templatemo_search"
-      tabindex="-1"
-      role="dialog"
-      aria-labelledby="exampleModalLabel"
-      aria-hidden="true"
-    >
-      <div class="modal-dialog modal-lg" role="document">
-        <div class="w-100 pt-1 mb-5 text-right">
-          <button
-            type="button"
-            class="btn-close"
-            data-bs-dismiss="modal"
-            aria-label="Close"
-          ></button>
-        </div>
-        <form
-          action=""
-          method="get"
-          class="modal-content modal-body border-0 p-0"
-        >
-          <div class="input-group mb-2">
-            <input
-              type="text"
-              class="form-control"
-              id="inputModalSearch"
-              name="q"
-              placeholder="Search ..."
-            />
-            <button
-              type="submit"
-              class="input-group-text bg-success text-light"
-            >
-              <i class="fa fa-fw fa-search text-white"></i>
-            </button>
-          </div>
-        </form>
-      </div>
-    </div>
-
-    <!-- Start Content Page -->
-    <div class="container-fluid bg-light py-5">
-      <div class="col-md-6 m-auto text-center">
-        <h1 class="h1">Contact Us</h1>
-        <p>
-          Proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum. Lorem ipsum dolor sit amet.
-        </p>
-      </div>
-    </div>
-
-    <div id="contact-details" class="container" style="padding: 40px 0px">
-      <div class="row">
-        <div class="col-md-6">
-          <div class="details">
-            <span>GET IN TOUCH</span>
-            <h2>Visit one of our agency location or contact us today</h2>
-            <h3>Head Office</h3>
-            <ul>
-              <li>
-                <i class="fa-solid fa-map-location-dot"></i>
-                <p>Itahari-4 Province-1 Koshi Sunsari</p>
-              </li>
-              <li>
-                <i class="fa-solid fa-envelope"></i>
-                <p>contact@gmail.com</p>
-              </li>
-              <li>
-                <i class="fa-solid fa-phone"></i>
-                <p>(+91) 9800000000</p>
-              </li>
-              <li>
-                <i class="fa-solid fa-clock"></i>
-                <p>Monday to Saturday 9:00 - 18:00</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3439.7090721847076!2d87.27490759756212!3d26.6540568350139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef6c6ffd419ad7%3A0x3c19a0cb1869a764!2sSusma%20Koirala%20Memorial%20College!5e0!3m2!1sen!2snp!4v1706363881658!5m2!1sen!2snp"
-              width="100%"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
+    <section id="cart-add" class="cart-total">
+      <div id="coupon">
+        <h3>Apply Coupon</h3>
+        <div>
+          <input type="text" placeholder="Enter Your Coupon" />
+          <button class="normal btn-success">Apply</button>
         </div>
       </div>
-    </div>
-
-    <div
-      id="form-details"
-      class="container mb-5"
-      style="border: 1px solid grey; padding: 10px"
-    >
-      <div class="row">
-        <div class="col-md-6">
-          <form action="">
-            <span>LEAVE A MESSAGE</span>
-            <h2>We love to hear from You</h2>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Your Name" />
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="E-mail" />
-            </div>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Subject" />
-            </div>
-            <div class="mb-3">
-              <textarea
-                class="form-control"
-                placeholder="Your Message"
-                rows="5"
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn-success">Submit</button>
-          </form>
-        </div>
-        <div class="col-md-6">
-          <div class="people">
-            <div>
-              <img src="./assets/img/people/1.png" alt="" />
-              <p>
-                <span>Jhon Doe</span>Senior Marketing Manager<br />
-                Phone: +9000 0000 00 00<br />Email: contact@gmail.com
-              </p>
-            </div>
-            <div>
-              <img src="./assets/img/people/2.png" alt="" />
-              <p>
-                <span>William Smith</span>Senior Marketing Manager<br />
-                Phone: +9000 0000 00 00<br />Email: contact@gmail.com
-              </p>
-            </div>
-            <div>
-              <img src="./assets/img/people/3.png" alt="" />
-              <p>
-                <span>Mary Kon</span>Senior Marketing Manager<br />
-                Phone: +9000 0000 00 00<br />Email: contact@gmail.com
-              </p>
-            </div>
-          </div>
-        </div>
+      <div id="subtotal">
+        <h3>Cart Totals</h3>
+        <table>
+          <tr>
+            <td>Cart Subtotal</td>
+            <td>Rs. 2200</td>
+          </tr>
+          <tr>
+            <td>Shipping</td>
+            <td>Rs. 2200</td>
+          </tr>
+          <tr>
+            <td><strong>Total</strong></td>
+            <td><strong>Rs. 2200</strong></td>
+          </tr>
+        </table>
+        <button class="normal btn-success">Proceed to checkout</button>
       </div>
-    </div>
+    </section>
 
     <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
