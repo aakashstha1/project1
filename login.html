@@ -4,8 +4,15 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Login</title>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
     <link rel="apple-touch-icon" href="assets/img/apple-icon.png" />
-    <link rel="shortcut icon" type="image/x-icon" href="" />
+    <link
+      rel="shortcut icon"
+      type="image/x-icon"
+      href="assets/img/favicon.ico"
+    />
 
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/templatemo.css" />
@@ -56,18 +63,25 @@
       }
 
       .form-bg-color {
-        background-color: #e2e2e2;
+        background-color: #dcdada;
+        position: relative;
       }
 
-      .login-form{
-        padding: 40px 0;
-        
+      .main-container {
+        height: 75vh;
+        width: 100%;
       }
-      .login-form>.center-login{
+
+      .center-container {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 30%;
         border-radius: 10px;
         overflow: hidden;
       }
-      
+
       .password-toggle {
         cursor: pointer;
         user-select: none;
@@ -76,130 +90,139 @@
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
       }
+
+      .hellp {
+        font-size: 8px;
+      }
     </style>
   </head>
+
   <body>
-  <nav class="navbar navbar-expand-lg navbar-light shadow">
-    <div class="container d-flex justify-content-between align-items-center">
-      <a
-        class="navbar-brand text-success logo h1 align-self-center"
-        href="index.html"
-      >
-        LOGO
-      </a>
+    <!-- Header -->
+    <nav class="navbar navbar-expand-lg navbar-light shadow">
+      <div class="container d-flex justify-content-between align-items-center">
+        <a
+          class="navbar-brand text-success logo h1 align-self-center"
+          href="index.html"
+        >
+          LOGO
+        </a>
 
-      <button
-        class="navbar-toggler border-0"
-        type="button"
-        data-bs-toggle="collapse"
-        data-bs-target="#templatemo_main_nav"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle navigation"
-      >
-        <span class="navbar-toggler-icon"></span>
-      </button>
+        <button
+          class="navbar-toggler border-0"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#templatemo_main_nav"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-      <div
-        class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between"
-        id="templatemo_main_nav"
-      >
-        <div class="flex-fill">
-          <ul class="nav navbar-nav d-flex justify-content-between mx-lg-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="index.html">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="about.html">About</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="shop.html">Shop</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">Contact</a>
-            </li>
-          </ul>
-        </div>
-        <div class="navbar align-self-center d-flex">
-          <div
-            class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3"
-          ></div>
-          <a
-            class="nav-icon d-none d-lg-inline"
-            href="#"
-            data-bs-toggle="modal"
-            data-bs-target="#templatemo_search"
-          >
-            <i class="fa fa-fw fa-search text-dark mr-2"></i>
-          </a>
-          
+        <div
+          class="align-self-center collapse navbar-collapse flex-fill d-lg-flex justify-content-lg-between"
+          id="templatemo_main_nav"
+        >
+          <div class="flex-fill">
+            <ul
+              class="nav navbar-nav d-flex justify-content-between mx-lg-auto"
+            >
+              <li class="nav-item">
+                <a class="nav-link" href="index.html">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="about.html">About</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="shop.html">Shop</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contact.html">Contact</a>
+              </li>
+            </ul>
+          </div>
+         
         </div>
       </div>
-    </div>
-  </nav>
+    </nav>
+    <!-- Close Header -->
 
-  <div class="container d-flex justify-content-center align-items-center login-form">
-    <div class="border border-success center-login shadow ">
-      <form class="p-4 form-bg-color">
-        <h1 class="text-center text-success">Login</h1>
-        <div class="mb-3">
-          <label for="exampleInputEmail1" class="form-label text-success"
-            >Email</label
-          >
-          <input
-            type="email"
-            class="form-control"
-            id="exampleInputEmail1"
-            aria-describedby="emailHelp"
-          />
-        </div>
-        <div class="mb-2">
-          <label for="exampleInputPassword1" class="form-label text-success"
-            >Password</label
-          >
-          <div class="input-group">
+    <div class="main-container">
+      <div class="border border-success center-container shadow ">
+        <form class="p-4 form-bg-color">
+          <h1 class="text-center text-success">Log In</h1>
+          <div class="mb-3">
+            <label for="exampleInputEmail1" class="form-label text-success"
+              >Email</label
+            >
             <input
-              type="password"
+              type="email"
               class="form-control"
-              id="exampleInputPassword1"
+              id="exampleInputEmail1"
+              aria-describedby="emailHelp"
             />
-            <div class="input-group-append">
-              <span
-                class="input-group-text password-toggle"
-                onclick="togglePassword()"
-              >
-                <i class="fas fa-eye-slash"></i>
-              </span>
+          </div>
+          <div class="mb-2">
+            <label for="exampleInputPassword1" class="form-label text-success"
+              >Password</label
+            >
+            <div class="input-group">
+              <input
+                type="password"
+                class="form-control"
+                id="exampleInputPassword1"
+              />
+              <div class="input-group-append">
+                <span
+                  class="input-group-text password-toggle"
+                  onclick="togglePassword()"
+                >
+                  <i class="fas fa-eye-slash"></i>
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-        <div class="text-end">
-          <a href="" class="text-success" >Forgot Password?</a>
-        </div>
-        <div
-          class="mb-3 myTest custom-control custom-checkbox text-success text"
-        >
-          <input
-            type="checkbox"
-            class="custom-control-input"
-            id="customCheck1"
-          />
-          <label class="custom-control-label" for="customCheck1"
-            >Remember login.</label
+          <div class="text-end" ">
+            <a href="" class="text-success fs-6" style="font-size: 8px"
+              >Forgot Password?</a
+            >
+          </div>
+          <div
+            class="mb-3 myTest custom-control custom-checkbox text-success text"
           >
-        </div>
-        <button type="submit" class="btn btn-success w-100 mb-3">Log In</button>
-        <div class="text-center">
-          <a href="register.html" class="text-success">Create new account.</a>
-        </div>
-      </form>
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="customCheck1"
+            />
+            <label class="custom-control-label" for="customCheck1"
+              >I agree to the above terms.</label
+            ><br />
+            <input
+              type="checkbox"
+              class="custom-control-input"
+              id="customCheck1"
+            />
+            <label class="custom-control-label" for="customCheck1"
+              >Remember login.</label
+            >
+          </div>
+          <button type="submit" class="btn btn-success w-100 mb-3">
+            Log In
+          </button>
+          <div class="text-center">
+            <a href="register.html" class="text-success">Create new account.</a>
+          </div>
+        </form>
+      </div>
     </div>
-  </div>
 
+    <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
       <div class="container">
         <div class="row">
-          <div class="col-md-4 pt-5">
+          <div class="col-md-3 pt-5">
             <h2 class="h2 text-success border-bottom pb-3 border-light logo">
               My Shop
             </h2>
@@ -223,7 +246,7 @@
             </ul>
           </div>
 
-          <div class="col-md-4 pt-5">
+          <div class="col-md-3 pt-5">
             <h2 class="h2 text-light border-bottom pb-3 border-light">
               Products
             </h2>
@@ -243,7 +266,7 @@
             </ul>
           </div>
 
-          <div class="col-md-4 pt-5">
+          <div class="col-md-3 pt-5">
             <h2 class="h2 text-light border-bottom pb-3 border-light">
               Further Info
             </h2>
@@ -256,6 +279,18 @@
               <li><a class="text-decoration-none" href="#">FAQs</a></li>
               <li><a class="text-decoration-none" href="#">Contact</a></li>
             </ul>
+          </div>
+          <div class="col-md-3 pt-5">
+            <h2 class="h2 text-light border-bottom pb-3 border-light">
+              Payment Partner
+            </h2>
+            <a href="https://esewa.com.np" target="_blank"
+              ><img
+                src="./assets/img/esewa.png"
+                alt=""
+                width="300px"
+                height="150px"
+            /></a>
           </div>
         </div>
 
@@ -312,7 +347,7 @@
             <div class="input-group mb-2">
               <input
                 type="text"
-                class="form-control bg-dark border-light"
+                class="form-control border-light"
                 id="subscribeEmail"
                 placeholder="Email address"
               />
@@ -338,7 +373,6 @@
     </footer>
     <!-- End Footer -->
 
-    <!-- Start Script -->
     <script
       src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/js/all.min.js"
       integrity="sha512-qjUFRQBkgJpeINnR5VrgGp2ckz2lJgk9fHFPJiXW0p3z46d3miucAHe3/bDb2r8xWUJMOGd+u8v2v3RkqrcJ/w=="
@@ -361,11 +395,13 @@
         }
       }
     </script>
+    <!-- Start Script -->
     <script src="assets/js/jquery-1.11.0.min.js"></script>
     <script src="assets/js/jquery-migrate-1.2.1.min.js"></script>
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
     <!-- End Script -->
-  
+     
+  </body>
 </html>
