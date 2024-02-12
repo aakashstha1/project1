@@ -68,7 +68,7 @@
       }
 
       .main-container {
-        height: 75vh;
+        height: 90vh;
         width: 100%;
       }
 
@@ -80,6 +80,7 @@
         width: 30%;
         border-radius: 10px;
         overflow: hidden;
+        margin: 50px 0;
       }
 
       .password-toggle {
@@ -89,10 +90,6 @@
         height: 100%;
         border-top-left-radius: 0;
         border-bottom-left-radius: 0;
-      }
-
-      .hellp {
-        font-size: 8px;
       }
     </style>
   </head>
@@ -127,9 +124,10 @@
           <div class="flex-fill">
             <ul
               class="nav navbar-nav d-flex justify-content-between mx-lg-auto"
+              style="padding: 0px 50px"
             >
               <li class="nav-item">
-                <a class="nav-link" href="index.html">Home</a>
+                <a class="nav-link active" href="index.html">Home</a>
               </li>
               <li class="nav-item">
                 <a class="nav-link" href="about.html">About</a>
@@ -142,15 +140,88 @@
               </li>
             </ul>
           </div>
-         
+          <div class="navbar align-self-center d-flex" ">
+            <div
+              class="d-lg-none flex-sm-fill mt-3 mb-4 col-7 col-sm-auto pr-3"
+            ></div>
+            <a
+              class="nav-icon d-none d-lg-inline"
+              href="#"
+              data-bs-toggle="modal"
+              data-bs-target="#templatemo_search"
+            >
+              <i class="fa fa-fw fa-search text-dark mr-2"></i>
+            </a>
+            <a
+              class="nav-icon position-relative text-decoration-none"
+              href="cart.html"
+            >
+              <i class="fa fa-fw fa-cart-arrow-down text-dark mr-1"></i>
+              <span
+                class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"
+                >7</span
+              >
+            </a>
+            <a
+              class="nav-icon position-relative text-decoration-none"
+              href="login.html"
+            >
+              <i class="fa fa-fw fa-user text-dark mr-3"></i>
+              <span
+                class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"
+                >+99</span
+              >
+            </a>
+          </div>
         </div>
       </div>
     </nav>
+
+    <div
+      class="modal fade bg-white"
+      id="templatemo_search"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="w-100 pt-1 mb-5 text-right">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <form
+          action=""
+          method="get"
+          class="modal-content modal-body border-0 p-0"
+        >
+          <div class="input-group mb-2">
+            <input
+              type="text"
+              class="form-control"
+              id="inputModalSearch"
+              name="q"
+              placeholder="Search ..."
+            />
+            <button
+              type="submit"
+              class="input-group-text bg-success text-light"
+            >
+              <i class="fa fa-fw fa-search text-white"></i>
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
     <!-- Close Header -->
 
     <div class="main-container">
-      <div class="border border-success center-container shadow ">
-        <form class="p-4 form-bg-color">
+      <div class="border border-success center-container shadow">
+        <form class="p-4 form-bg-color" action="login.php" method="POST">
           <h1 class="text-center text-success">Log In</h1>
           <div class="mb-3">
             <label for="exampleInputEmail1" class="form-label text-success"
@@ -161,6 +232,7 @@
               class="form-control"
               id="exampleInputEmail1"
               aria-describedby="emailHelp"
+              name="email"
             />
           </div>
           <div class="mb-2">
@@ -172,6 +244,7 @@
                 type="password"
                 class="form-control"
                 id="exampleInputPassword1"
+                name="password"
               />
               <div class="input-group-append">
                 <span
@@ -183,8 +256,8 @@
               </div>
             </div>
           </div>
-          <div class="text-end" ">
-            <a href="" class="text-success fs-6" style="font-size: 8px"
+          <div class="text-end">
+            <a href="#" class="text-success fs-6" style="font-size: 8px"
               >Forgot Password?</a
             >
           </div>
@@ -202,13 +275,18 @@
             <input
               type="checkbox"
               class="custom-control-input"
-              id="customCheck1"
+              id="customCheck2"
             />
-            <label class="custom-control-label" for="customCheck1"
+            <label class="custom-control-label" for="customCheck2"
               >Remember login.</label
             >
           </div>
-          <button type="submit" class="btn btn-success w-100 mb-3">
+          <!-- Google reCAPTCHA -->
+          <div
+            class="g-recaptcha"
+            data-sitekey="6LcilW8pAAAAAEeOIquaKNFo6PnxaHiQa6C3k26y"
+          ></div>
+          <button type="submit" class="btn btn-success w-100 mb-3 mt-2">
             Log In
           </button>
           <div class="text-center">
@@ -217,7 +295,6 @@
         </form>
       </div>
     </div>
-
     <!-- Start Footer -->
     <footer class="bg-dark" id="tempaltemo_footer">
       <div class="container">
@@ -401,6 +478,8 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
+
     <!-- End Script -->
      
   </body>
