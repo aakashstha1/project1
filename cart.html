@@ -313,21 +313,20 @@
                     class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0"
                   >
                     Cart Subtotal
-                    <span>$53.98</span>
+                    <span>Rs.1000</span>
                   </li>
                   <li
                     class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 pb-0"
                   >
-                    Shpping
-                    <span>$53.98</span>
+                    Shipping
+                    <span>Rs.200</span>
                   </li>
                   <li
                     class="list-group-item d-flex justify-content-between align-items-center px-0"
                   >
                     VAT
-                    <span>$21</span>
+                    <span>Rs.120</span>
                   </li>
-
                   <li
                     class="list-group-item d-flex justify-content-between align-items-center border-0 px-0 mb-3"
                   >
@@ -337,11 +336,15 @@
                         <p class="mb-0">(including VAT)</p>
                       </strong>
                     </div>
-                    <span><strong>$53.98</strong></span>
+                    <span><strong>Rs.1320</strong></span>
                   </li>
                 </ul>
 
-                <button type="button" class="btn btn-success btn-lg btn-block">
+                <button
+                  id="checkoutButton"
+                  type="button"
+                  class="btn btn-success btn-lg btn-block"
+                >
                   Go to checkout
                 </button>
               </div>
@@ -512,6 +515,58 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
+    <script>
+      var checkoutParams = {
+        amt: 100,
+        psc: 0,
+        pdc: 0,
+        txAmt: 0,
+        tAmt: 100,
+        pid: "ee2c3ca1-696b-4cc5-a6be-2c40d929d453",
+        scd: "EPAYTEST",
+        su: "http://merchant.com.np/page/esewa_payment_success",
+        fu: "http://merchant.com.np/page/esewa_payment_failed",
+      };
+    
+      var transrecParams = {
+        amt: 100,
+        rid: "000AE01",
+        pid: "ee2c3ca1-696b-4cc5-a6be-2c40d929d453",
+        scd: "EPAYTEST",
+      };
+    
+      document
+        .getElementById("checkoutButton")
+        .addEventListener("click", function () {
+          post("https://uat.esewa.com.np/epay/main", checkoutParams);
+        });
+    
+      document
+        .getElementById("transrecButton")
+        .addEventListener("click", function () {
+          post("https://uat.esewa.com.np/epay/transrec", transrecParams);
+        });
+    
+      function post(path, params) {
+        var form = document.createElement("form");
+        form.setAttribute("method", "POST");
+        form.setAttribute("action", path);
+    
+        for (var key in params) {
+          var hiddenField = document.createElement("input");
+          hiddenField.setAttribute("type", "hidden");
+          hiddenField.setAttribute("name", key);
+          hiddenField.setAttribute("value", params[key]);
+          form.appendChild(hiddenField);
+        }
+    
+        document.body.appendChild(form);
+        form.submit();
+      }
+    </script>
+    
+    
+
     <!-- End Script -->
   </body>
 </html>
