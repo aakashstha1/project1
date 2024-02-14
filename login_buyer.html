@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Ecommerce - Login page</title>
+    <title>Ecommerce - Login as buyer page</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -97,13 +97,17 @@
             </a>
             <a
               class="nav-icon position-relative text-decoration-none"
-              href="login.html"
+              href="login_buyer.html"
             >
               <i class="fa fa-fw fa-user text-dark mr-3"></i>
-              <span
-                class="position-absolute top-0 left-100 translate-middle badge rounded-pill bg-light text-dark"
-                >+99</span
-              >
+              Login
+            </a>
+
+            <a
+              class="nav-icon position-relative text-decoration-none btn btn-success px-3 text-white"
+              href="signUp.html"
+            >
+              Sign Up
             </a>
           </div>
         </div>
@@ -111,99 +115,97 @@
     </nav>
     <!-- Close Header -->
     <div class="container-fluid h-custom ">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          
+      <div class="row d-flex justify-content-center align-items-center h-100">
           <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 border m-4 p-4 rounded shadow">
-            <form>
-              <h1 class="d-flex justify-content-center align-items-center text-success mb-4">Login</h1>
-            
-    
-                            <div class="form-outline mb-4">
-                <label class="form-label" for="form3Example3">Email address</label>
-                <input type="email" id="form3Example3" class="form-control form-control-lg"
-                  placeholder="Enter email address" />
-               
-              </div>
-    
-          
-              <div class="form-outline mb-3">
-                <label class="form-label" for="form3Example4">Password</label>
-                <div class="input-group">
-                  <input type="password" id="form3Example4" class="form-control form-control-lg"
-                    placeholder="Enter password" />
-                  <div class="input-group-append">
-                    <button class="btn btn-outline-secondary m-1" type="button" id="password-toggle">
-                      <i class="fas fa-eye"></i>
-                    </button>
+              <form>
+                  <div class="d-flex justify-content-between mb-4">
+                    <a href="login_seller.html">
+                      <button id="seller-btn" type="button" class="btn btn-outline-success btn-lg w-100 ">Login as Seller</button></a>
+                      <a href="login_buyer.html">
+                      <button id="buyer-btn" type="button" class="btn btn-outline-success btn-lg w-100 m-1 active"> Login as Buyer</button></a>
                   </div>
-                </div>
-              </div>
-    
-         
-                
-               
-                <a href="forgetPass.html" class="text-body d-flex justify-content-end">Forgot password?</a>
-                <div class="form-check mb-0">
-                    <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
-                    <label class="form-check-label" for="form2Example3">
-                      Remember me
-                    </label>
-                    
+  
+                  <div class="form-outline mb-4">
+                      <label class="form-label" for="form3Example3">Email address</label>
+                      <input type="email" id="form3Example3" class="form-control form-control-lg"
+                          placeholder="Enter email address" />
                   </div>
-    
-              <div class="text-center text-lg-start mt-4 pt-2">
-                <button type="button" class="btn btn-success btn-lg w-100"
-                  style="padding-left: 2.5rem; padding-right: 2.5rem;">Login</button>
-                  
-                <p class="small fw-bold mt-2 pt-1 mb-0 d-flex justify-content-center">Don't have an account? <a href="register.html"
-                    class="link-success">Register</a></p>
-              </div>
-              <div class="d-flex justify-content-center align-items-center">
-                <hr class="w-50">Or <hr class="w-50">
-              </div>
-              <p class="lead fw-normal m-1 d-flex justify-content-center">Sign in with</p>
-
-              <div class="d-flex flex-row align-items-center justify-content-center align-items-center m-1">
-                
-                <button type="button" class="btn btn-success btn-floating mx-1">
-                  <i class="fab fa-facebook-f"></i>
-                </button>
-    
-                <button type="button" class="btn btn-success btn-floating mx-1">
-                  <i class="fab fa-twitter"></i>
-                </button>
-    
-                <button type="button" class="btn btn-success btn-floating mx-1">
-                  <i class="fab fa-linkedin-in"></i>
-                </button>
-              </div>
-    
-            </form>
+  
+                  <div class="form-outline mb-3">
+                      <label class="form-label" for="form3Example4">Password</label>
+                      <div class="input-group">
+                          <input type="password" id="form3Example4" class="form-control form-control-lg"
+                              placeholder="Enter password" />
+                          <div class="input-group-append">
+                              <button class="btn btn-outline-secondary m-1" type="button" id="password-toggle">
+                                  <i class="fas fa-eye"></i>
+                              </button>
+                          </div>
+                      </div>
+                  </div>
+  
+                  <a href="forgetPass.html" class="text-body d-flex justify-content-end">Forgot password?</a>
+                  <div class="form-check mb-0">
+                      <input class="form-check-input me-2" type="checkbox" value="" id="form2Example3" />
+                      <label class="form-check-label" for="form2Example3">
+                          Remember me
+                      </label>
+                  </div>
+  
+                  <div class="text-center text-lg-start mt-4 pt-2">
+                      <button type="button" class="btn btn-success btn-lg w-100"
+                          style="padding-left: 2.5rem; padding-right: 2.5rem;">LOGIN</button>
+                      <p class="small fw-bold mt-2 pt-1 mb-0 d-flex justify-content-center">Don't have an account? <a
+                              href="signUp.html" class="link-success">Sign Up</a></p>
+                  </div>
+                  <div class="d-flex justify-content-center align-items-center">
+                      <hr class="w-50">Or
+                      <hr class="w-50">
+                  </div>
+                  <p class="lead fw-normal m-1 d-flex justify-content-center">Sign in with</p>
+  
+                  <div class="d-flex flex-row align-items-center justify-content-center align-items-center m-1">
+  
+                      <button type="button" class="btn btn-success btn-floating mx-1">
+                          <i class="fab fa-facebook-f"></i>
+                      </button>
+  
+                      <button type="button" class="btn btn-success btn-floating mx-1">
+                          <i class="fab fa-twitter"></i>
+                      </button>
+  
+                      <button type="button" class="btn btn-success btn-floating mx-1">
+                          <i class="fab fa-linkedin-in"></i>
+                      </button>
+                  </div>
+  
+              </form>
           </div>
-        </div>
       </div>
+  </div>
+  
     <!-- Start Footer -->
-    <footer class="bg-dark" id="tempaltemo_footer">
+    <footer class="bg-dark">
       <div class="container">
         <div class="row">
           <div class="col-md-3 pt-5">
             <h2 class="h2 text-success border-bottom pb-3 border-light logo">
               My Shop
             </h2>
-            <ul class="list-unstyled text-light footer-link-list">
+            <ul class="list-unstyled text-light footer-link-list lh-lg">
               <li>
                 <i class="fas fa-map-marker-alt fa-fw"></i>
                 123 Consectetur at ligula 10660
               </li>
               <li>
                 <i class="fa fa-phone fa-fw"></i>
-                <a class="text-decoration-none" href="tel:010-020-0340"
+                <a class="text-decoration-none text-light" href="#"
                   >010-020-0340</a
                 >
               </li>
               <li>
                 <i class="fa fa-envelope fa-fw"></i>
-                <a class="text-decoration-none" href="mailto:info@company.com"
+                <a class="text-decoration-none text-light" href="#"
                   >info@company.com</a
                 >
               </li>
@@ -211,50 +213,75 @@
           </div>
 
           <div class="col-md-3 pt-5">
-            <h2 class="h2 text-light border-bottom pb-3 border-light">
+            <h2
+              class="h2 text-light border-bottom pb-3 border-light text-white"
+            >
               Products
             </h2>
-            <ul class="list-unstyled text-light footer-link-list">
-              <li><a class="text-decoration-none" href="#">Clothes</a></li>
-              <li><a class="text-decoration-none" href="#">Shoes</a></li>
-              <li><a class="text-decoration-none" href="#">Sports</a></li>
+            <ul class="list-unstyled text-light footer-link-list lh-lg">
               <li>
-                <a class="text-decoration-none" href="#">Grocery</a>
+                <a class="text-decoration-none text-light" href="#">Clothes</a>
               </li>
               <li>
-                <a class="text-decoration-none" href="#">Home Appliances</a>
+                <a class="text-decoration-none text-light" href="#">Shoes</a>
               </li>
               <li>
-                <a class="text-decoration-none" href="#">Electronics</a>
+                <a class="text-decoration-none text-light" href="#">Sports</a>
+              </li>
+              <li>
+                <a class="text-decoration-none text-light" href="#">Grocery</a>
+              </li>
+              <li>
+                <a class="text-decoration-none text-light" href="#"
+                  >Home Appliances</a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none text-light" href="#"
+                  >Electronics</a
+                >
               </li>
             </ul>
           </div>
 
           <div class="col-md-3 pt-5">
-            <h2 class="h2 text-light border-bottom pb-3 border-light">
+            <h2
+              class="h2 text-light border-bottom pb-3 border-light"
+            >
               Further Info
             </h2>
-            <ul class="list-unstyled text-light footer-link-list">
-              <li><a class="text-decoration-none" href="#">Home</a></li>
-              <li><a class="text-decoration-none" href="#">About Us</a></li>
+            <ul class="list-unstyled text-light footer-link-list lh-lg">
               <li>
-                <a class="text-decoration-none" href="#">Shop Locations</a>
+                <a class="text-decoration-none text-light" href="#">Home</a>
               </li>
-              <li><a class="text-decoration-none" href="#">FAQs</a></li>
-              <li><a class="text-decoration-none" href="#">Contact</a></li>
+              <li>
+                <a class="text-decoration-none text-light" href="#">About Us</a>
+              </li>
+              <li>
+                <a class="text-decoration-none text-light" href="#"
+                  >Shop Locations</a
+                >
+              </li>
+              <li>
+                <a class="text-decoration-none text-light" href="#">FAQs</a>
+              </li>
+              <lilighttext-light>
+                <a class="text-decoration-none text-light" href="#">Contact</a>
+              </lilighttext-light
             </ul>
           </div>
           <div class="col-md-3 pt-5">
             <h2 class="h2 text-light border-bottom pb-3 border-light">
               Payment Partner
             </h2>
-            <a href="https://esewa.com.np" target="_blank"
-              ><img
+            <a href="https://esewa.com.np" target="_blank">
+              <img
                 src="./assets/img/esewa.png"
                 alt=""
                 width="300px"
-                height="150px"
-            /></a>
+                height="140px"
+              />
+            </a>
           </div>
         </div>
 
@@ -263,9 +290,9 @@
             <div class="w-100 my-3 border-top border-light"></div>
           </div>
           <div class="col-auto me-auto">
-            <ul class="list-inline text-left footer-icons">
+            <ul class="list-inline text-center footer-icons">
               <li
-                class="list-inline-item border border-light rounded-circle text-center"
+                class="list-inline-item "
               >
                 <a
                   class="text-light text-decoration-none"
@@ -275,7 +302,7 @@
                 ></a>
               </li>
               <li
-                class="list-inline-item border border-light rounded-circle text-center"
+                class="list-inline-item"
               >
                 <a
                   class="text-light text-decoration-none"
@@ -285,7 +312,7 @@
                 ></a>
               </li>
               <li
-                class="list-inline-item border border-light rounded-circle text-center"
+                class="list-inline-item "
               >
                 <a
                   class="text-light text-decoration-none"
@@ -295,7 +322,7 @@
                 ></a>
               </li>
               <li
-                class="list-inline-item border border-light rounded-circle text-center"
+                class="list-inline-item "
               >
                 <a
                   class="text-light text-decoration-none"
@@ -315,9 +342,9 @@
                 id="subscribeEmail"
                 placeholder="Email address"
               />
-              <div class="input-group-text btn-success text-light">
+              <button class="input-group-text btn-success text-white cursor-pointer">
                 Subscribe
-              </div>
+              </button>
             </div>
           </div>
         </div>
@@ -335,6 +362,7 @@
         </div>
       </div>
     </footer>
+
     <!-- End Footer -->
 
     <!-- Start Script -->
