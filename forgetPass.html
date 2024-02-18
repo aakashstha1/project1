@@ -5,10 +5,9 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
-   
     <link rel="stylesheet" href="assets/css/bootstrap.min.css" />
     <link rel="stylesheet" href="assets/css/templatemo.css" />
-  
+
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
@@ -22,11 +21,8 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap"
     />
-   
   </head>
   <body>
-
-  <div>
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light shadow">
       <div class="container d-flex justify-content-between align-items-center">
@@ -112,36 +108,98 @@
         </div>
       </div>
     </nav>
-    <!-- Close Header -->
-    <div class="container-fluid h-custom ">
-        <div class="row d-flex justify-content-center align-items-center h-100">
-          
-          <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 border m-4 p-4 rounded shadow">
-            <form>
-              <h1 class="d-flex justify-content-center align-items-center text-success mb-4">Reset Password</h1>
-            
-    
-                            <div class="form-outline mb-4">
-                <label class="form-label" for="form3Example3">Email address</label>
-                <input type="email" id="form3Example3" class="form-control form-control-lg"
-                  placeholder="Enter email address" />
-               
-                            </div>
-    
-              <div class="text-center text-lg-start mt-3 pt-2">
-                <button type="button" class="btn btn-success btn-lg w-100"
-                  style="padding-left: 2.5rem; padding-right: 2.5rem;">Submit</button>
-              </div>
-
-              <div class="text-center text-lg-start mt-2 pt-2">
-                <button type="button" class="btn btn-outline-success btn-lg w-100"
-                  style="padding-left: 2.5rem; padding-right: 2.5rem;"><a href="login_buyer.html" class="text-decoration-none text-success">Back to login</a> </button>
-              </div>
-    
-            </form>
+    <div
+      class="modal fade bg-white"
+      id="templatemo_search"
+      tabindex="-1"
+      role="dialog"
+      aria-labelledby="exampleModalLabel"
+      aria-hidden="true"
+    >
+      <div class="modal-dialog modal-lg" role="document">
+        <div class="w-100 pt-1 mb-5 text-right">
+          <button
+            type="button"
+            class="btn-close"
+            data-bs-dismiss="modal"
+            aria-label="Close"
+          ></button>
+        </div>
+        <form
+          action=""
+          method="get"
+          class="modal-content modal-body border-0 p-0"
+        >
+          <div class="input-group mb-2">
+            <input
+              type="text"
+              class="form-control"
+              id="inputModalSearch"
+              name="q"
+              placeholder="Search ..."
+            />
+            <button
+              type="submit"
+              class="input-group-text bg-success text-light"
+            >
+              <i class="fa fa-fw fa-search text-white"></i>
+            </button>
           </div>
+        </form>
+      </div>
+    </div>
+    <!-- Close Header -->
+    <div class="container-fluid h-custom">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div
+          class="col-md-8 col-lg-6 col-xl-4 offset-xl-1 border m-4 p-4 rounded shadow"
+        >
+          <form>
+            <h1
+              class="d-flex justify-content-center align-items-center text-success mb-4"
+            >
+              Reset Password
+            </h1>
+
+            <div class="form-outline mb-4">
+              <label class="form-label" for="form3Example3"
+                >Email address</label
+              >
+              <input
+                type="email"
+                id="form3Example3"
+                class="form-control form-control-lg"
+                placeholder="Enter email address"
+              />
+            </div>
+
+            <div class="text-center text-lg-start mt-3 pt-2">
+              <button
+                type="button"
+                class="btn btn-success btn-lg w-100"
+                style="padding-left: 2.5rem; padding-right: 2.5rem"
+              >
+                Submit
+              </button>
+            </div>
+
+            <div class="text-center text-lg-start mt-2 pt-2">
+              <button
+                type="button"
+                class="btn btn-outline-success btn-lg w-100"
+                style="padding-left: 2.5rem; padding-right: 2.5rem"
+              >
+                <a
+                  href="login_buyer.html"
+                  class="text-decoration-none text-success"
+                  >Back to login</a
+                >
+              </button>
+            </div>
+          </form>
         </div>
       </div>
+    </div>
     <!-- Start Footer -->
     <footer class="bg-secondary">
       <div class="container">
@@ -171,9 +229,7 @@
           </div>
 
           <div class="col-md-3 pt-5">
-            <h2
-              class="h2 border-bottom pb-3 border-light text-white"
-            >
+            <h2 class="h2 border-bottom pb-3 border-light text-white">
               Products
             </h2>
             <ul class="list-unstyled text-light footer-link-list lh-lg">
@@ -203,9 +259,7 @@
           </div>
 
           <div class="col-md-3 pt-5">
-            <h2
-              class="h2 text-white border-bottom pb-3 border-light"
-            >
+            <h2 class="h2 text-white border-bottom pb-3 border-light">
               Further Info
             </h2>
             <ul class="list-unstyled text-light footer-link-list lh-lg">
@@ -223,9 +277,9 @@
               <li>
                 <a class="text-decoration-none text-light" href="#">FAQs</a>
               </li>
-              <lilighttext-light>
+              <li>
                 <a class="text-decoration-none text-light" href="#">Contact</a>
-              </lilighttext-light
+              </li>
             </ul>
           </div>
           <div class="col-md-3 pt-5">
@@ -249,9 +303,7 @@
           </div>
           <div class="col-auto me-auto">
             <ul class="list-inline text-center footer-icons">
-              <li
-                class="list-inline-item "
-              >
+              <li class="list-inline-item">
                 <a
                   class="text-white text-decoration-none"
                   target="_blank"
@@ -259,9 +311,7 @@
                   ><i class="fab fa-facebook-f fa-lg fa-fw"></i
                 ></a>
               </li>
-              <li
-                class="list-inline-item"
-              >
+              <li class="list-inline-item">
                 <a
                   class="text-white text-decoration-none"
                   target="_blank"
@@ -269,9 +319,7 @@
                   ><i class="fab fa-instagram fa-lg fa-fw"></i
                 ></a>
               </li>
-              <li
-                class="list-inline-item "
-              >
+              <li class="list-inline-item">
                 <a
                   class="text-white text-decoration-none"
                   target="_blank"
@@ -279,9 +327,7 @@
                   ><i class="fab fa-twitter fa-lg fa-fw"></i
                 ></a>
               </li>
-              <li
-                class="list-inline-item "
-              >
+              <li class="list-inline-item">
                 <a
                   class="text-white text-decoration-none"
                   target="_blank"
@@ -300,7 +346,9 @@
                 id="subscribeEmail"
                 placeholder="Email address"
               />
-              <button class="input-group-text btn-success text-white cursor-pointer">
+              <button
+                class="input-group-text btn-success text-white cursor-pointer"
+              >
                 Subscribe
               </button>
             </div>
@@ -329,7 +377,7 @@
     <script src="assets/js/bootstrap.bundle.min.js"></script>
     <script src="assets/js/templatemo.js"></script>
     <script src="assets/js/custom.js"></script>
-   
+
     <!-- End Script -->
   </body>
 </html>

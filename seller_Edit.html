@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Ecommerce - Contact</title>
+    <title>Ecommerce - Seller profile Edit</title>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
 
@@ -21,16 +21,7 @@
       rel="stylesheet"
       href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;200;300;400;500;700;900&display=swap"
     />
-
-    <!-- Load map styles -->
-    <link
-      rel="stylesheet"
-      href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css"
-      integrity="sha512-xodZBNTC5n17Xt2atTPuE1HxjVMSvLVW9ocqUKLsCC5CXdbqCmblAshOMAS6/keqq/sMZMZ19scR4PsZChSR7A=="
-      crossorigin=""
-    />
   </head>
-
   <body>
     <!-- Header -->
     <nav class="navbar navbar-expand-lg navbar-light shadow">
@@ -117,9 +108,7 @@
         </div>
       </div>
     </nav>
-    <!-- Close Header -->
 
-    <!-- Modal -->
     <div
       class="modal fade bg-white"
       id="templatemo_search"
@@ -160,119 +149,99 @@
         </form>
       </div>
     </div>
+    <!-- Close Header -->
 
-    <!-- Start Content Page -->
-    <div
-      class="container-fluid py-5"
-      style="
-        background-image: url('./assets/img/banner.png');
-        background-size: contain;
-        background-position: center;
-      "
-    >
-      <div class="col-md-6 m-auto text-center">
-        <h1 class="h1 text-white">Contact Us</h1>
-        <p class="text-light">
-          Proident, sunt in culpa qui officia deserunt mollit anim id est
-          laborum. Lorem ipsum dolor sit amet.
-        </p>
-      </div>
-    </div>
-
-    <div id="contact-details" class="container" style="padding: 40px 0px">
-      <div class="row">
+    <div class="container p-4">
+      <div class="row justify-content-center">
         <div class="col-md-6">
-          <div class="details">
-            <span>GET IN TOUCH</span>
-            <h2>Visit one of our agency location or contact us</h2>
-            <h3 class="p-2">Head Office</h3>
-            <ul>
-              <li class="d-flex gap-3">
-                <i class="fa-solid fa-map-location-dot"></i>
-                <p>Itahari-4 Province-1 Koshi Sunsari</p>
-              </li>
-              <li class="d-flex gap-3">
-                <i class="fa-solid fa-envelope"></i>
-                <p>contact@gmail.com</p>
-              </li>
-              <li class="d-flex gap-3">
-                <i class="fa-solid fa-phone"></i>
-                <p>(+91) 9800000000</p>
-              </li>
-              <li class="d-flex gap-3">
-                <i class="fa-solid fa-clock"></i>
-                <p>Monday to Saturday 9:00 - 18:00</p>
-              </li>
-            </ul>
-          </div>
-        </div>
-        <div class="col-md-6">
-          <div class="map">
-            <iframe
-              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3439.7090721847076!2d87.27490759756212!3d26.6540568350139!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x39ef6c6ffd419ad7%3A0x3c19a0cb1869a764!2sSusma%20Koirala%20Memorial%20College!5e0!3m2!1sen!2snp!4v1706363881658!5m2!1sen!2snp"
-              width="100%"
-              height="450"
-              style="border: 0"
-              allowfullscreen=""
-              loading="lazy"
-              referrerpolicy="no-referrer-when-downgrade"
-            ></iframe>
-          </div>
-        </div>
-      </div>
-    </div>
-
-    <div
-      id="form-details"
-      class="container mb-5"
-      style="border: 1px solid grey; padding: 10px"
-    >
-      <div class="row">
-        <div class="col-md-6">
-          <form action="">
-            <span>LEAVE A MESSAGE</span>
-            <h2>We love to hear from You</h2>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Your Name" />
-            </div>
-            <div class="mb-3">
-              <input type="email" class="form-control" placeholder="E-mail" />
-            </div>
-            <div class="mb-3">
-              <input type="text" class="form-control" placeholder="Subject" />
-            </div>
-            <div class="mb-3">
-              <textarea
-                class="form-control"
-                placeholder="Your Message"
-                rows="5"
-              ></textarea>
-            </div>
-            <button type="submit" class="btn btn-success">Submit</button>
-          </form>
-        </div>
-        <div class="col-md-6">
-          <div class="people">
-            <div>
-              <img src="./assets/img/people/1.png" alt="" />
-              <p>
-                <span>Jhon Doe</span>Senior Marketing Manager<br />
-                Phone: +9000 0000 00 00<br />Email: contact@gmail.com
-              </p>
-            </div>
-            <div>
-              <img src="./assets/img/people/2.png" alt="" />
-              <p>
-                <span>William Smith</span>Senior Marketing Manager<br />
-                Phone: +9000 0000 00 00<br />Email: contact@gmail.com
-              </p>
-            </div>
-            <div>
-              <img src="./assets/img/people/3.png" alt="" />
-              <p>
-                <span>Mary Kon</span>Senior Marketing Manager<br />
-                Phone: +9000 0000 00 00<br />Email: contact@gmail.com
-              </p>
+          <!-- User Profile Sidebar -->
+          <div class="card shadow">
+            <div class="card-body">
+              <div class="d-flex justify-content-center mb-3 position-relative">
+                <img
+                  src="./assets/img/people/1.png"
+                  class="img-fluid rounded-circle border"
+                  alt="User Photo"
+                  style="width: 200px; height: 200px"
+                />
+                <span class="badge bg-success position-absolute bottom-0"
+                  >Edit</span
+                >
+              </div>
+              <h5 class="card-title text-center">Seller Profile</h5>
+              <hr />
+              <form>
+                <div class="mb-3">
+                  <label for="username" class="form-label">Username</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="username"
+                    value="JohnDoe"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="companyName" class="form-label"
+                    >Company Name</label
+                  >
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="companyName"
+                    value="XYZ"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="contact" class="form-label">Contact</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="contact"
+                    value="025 xxxxx"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="email" class="form-label">Email</label>
+                  <input
+                    type="email"
+                    class="form-control"
+                    id="email"
+                    value="johndoe@example.com"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="pan" class="form-label">PAN</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="pan"
+                    value="xxxx xxxx xxxx"
+                  />
+                </div>
+                <div class="mb-3">
+                  <label for="address" class="form-label">Address</label>
+                  <input
+                    type="text"
+                    class="form-control"
+                    id="address"
+                    value="123 Main St, City"
+                  />
+                </div>
+                <!-- Add more user information here -->
+                <div
+                  class="d-flex justify-content-center align-items-center gap-2 p-4"
+                >
+                  <button type="submit" class="btn btn-primary w-100">
+                    Save
+                  </button>
+                  <a
+                    href="seller_profile.html"
+                    class="btn btn-secondary"
+                    style="height: 38px; width: 550px"
+                    >Cancel</a
+                  >
+                </div>
+              </form>
             </div>
           </div>
         </div>
@@ -447,7 +416,8 @@
         </div>
       </div>
     </footer>
-    Footer -->
+
+    <!-- End Footer -->
 
     <!-- Start Script -->
     <script src="assets/js/jquery-1.11.0.min.js"></script>
